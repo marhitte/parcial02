@@ -10,38 +10,40 @@ package main;
  * @author victorhugo
  */
 public class BloodData {
-     private String blood;
-     private String rh;
+     private Blood tipo;
+     private RhFactor rh;
      
-     public BloodData(){
-         this.blood="O";
-         this.rh="+";
-         
-     }
-    
-   public BloodData(String b,String r){    
-    this.blood=b;
-    this.rh=r;
-    }
+  public BloodData(){
+      tipo=Blood.O;
+      rh=RhFactor.POSITIVO;
+  }
+ public BloodData(Blood t, RhFactor rh){
+     this.tipo=t;
+     this.rh=rh;
+ }
+     
+public enum Blood{
+    O,A,B,AB;
+}
+ public enum RhFactor{
+     POSITIVO,
+     NEGATIVO;
+ }
 
-    
-    public String getBlood() {
-        return blood;
+    public Blood getTipo() {
+        return tipo;
     }
 
    
-    public void setBlood(String blood) {
-        this.blood = blood;
+    public void setTipo(Blood tipo) {
+        this.tipo = tipo;
     }
 
-  
-    public String getRh() {
+    public RhFactor getRh() {
         return rh;
     }
 
-    public void setRh(String rh) {
+    public void setRh(RhFactor rh) {
         this.rh = rh;
     }
-   
-   
 }
