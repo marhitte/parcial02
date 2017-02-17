@@ -5,15 +5,18 @@
  */
 package main;
 
+import main.BloodData.Blood;
+import main.BloodData.RhFactor;
+
 /**
  *
  * @author victorhugo
  */
 public class TestBloodData {
     public static void main(String[] args) {
-        BloodData p1=new BloodData();
-        System.out.println(p1.getBlood()+""+p1.getRh());
-        BloodData p2=new BloodData("AB","+");
-        System.out.println(p2.getBlood()+""+p2.getRh());
+        BloodData sangre=new BloodData();
+        System.out.println(sangre.getTipo()+""+sangre.getRh());
+        BloodData s2=new BloodData(Blood.A, RhFactor.POSITIVO);
+               
     }
 }
