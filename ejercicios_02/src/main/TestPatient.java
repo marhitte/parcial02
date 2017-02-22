@@ -5,16 +5,26 @@
  */
 package main;
 
+import main.BloodData.Blood;
+import main.BloodData.RhFactor;
+
 /**
  *
  * @author victorhugo
  */
 public class TestPatient {
-     public static void main(String[] args) {
-        Patient p1=new Patient();
-        System.out.println(p1.getIdnum()+"\n"+p1.getAge()+"\n"+p1.getTyp());
-        BloodData m=new BloodData();
-        //Patient p2=new Patient("0176",5,m);
-        //System.out.println(p2.getIdnum()+""+p2.getAge()+"\n"+p2.getTyp());
-    }
+
+public static void main(String[] args) {
+
+Patient p1=new Patient();
+
+System.out.println(p1.getIdnum()+"\n"+p1.getAge()+"\n"+p1.getSangre());
+
+BloodData sangp2=new BloodData(Blood.AB, RhFactor.NEGATIVO);
+
+Patient p2=new Patient("fguy ",12,sangp2);
+
+System.out.println(p2.getIdnum()+"\n"+p2.getAge()+p2.getSangre());
+
+}
 }
