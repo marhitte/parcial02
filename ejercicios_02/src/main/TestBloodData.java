@@ -15,8 +15,8 @@ import main.BloodData.RhFactor;
 public class TestBloodData {
     public static void main(String[] args) {
         BloodData sangre=new BloodData();
-        System.out.println(sangre.getTipo()+""+sangre.getRh());
+        System.out.println(sangre.getTipo()+" "+sangre.getRh());
         BloodData s2=new BloodData(Blood.A, RhFactor.POSITIVO);
-               
+        System.out.print(s2.getTipo()+" "+s2.getRh());
     }
 }
